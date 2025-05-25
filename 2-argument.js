@@ -1,9 +1,10 @@
-const { argv } = require('node:process');
+const args = process.argv.slice(2); // Skip 'node' and script name
+const numArgs = args.length;
 
-if (argv.length <= 2) {
-  console.log('No argument');
-} else if (argv.length === 3) {
-  console.log('Argument found');
+if (numArgs === 0) {
+  console.log("No arguments were passed.");
+} else if (numArgs === 1) {
+  console.log("One argument was passed:", args[0]);
 } else {
-  console.log('Arguments found');
+  console.log(`${numArgs} arguments were passed:`, args);
 }
