@@ -1,10 +1,9 @@
-const args = process.argv.slice(2); // Skip 'node' and script name
-const numArgs = args.length;
+const argsCount = process.argv.slice(2).length;
 
-if (numArgs === 0) {
-  console.log("No arguments were passed.");
-} else if (numArgs === 1) {
-  console.log("One argument was passed:", args[0]);
+if (argsCount === 0) {
+  console.log('No argument');
+} else if (argsCount === 1) {
+  console.log('Argument found');
 } else {
-  console.log(`${numArgs} arguments were passed:`, args);
+  console.log('Arguments found');
 }
